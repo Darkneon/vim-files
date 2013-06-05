@@ -3,12 +3,30 @@ filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-filetype plugin on
 
 " let Vundle manage Vundle required! 
 Bundle 'gmarik/vundle'
 
 "= Vundle Plugins ="
+
+"= General programming"
+Bundle 'https://github.com/vim-scripts/tlib.git' 
+Bundle 'https://github.com/garbas/vim-snipmate.git'
+" Bundle 'https://github.com/MarcWeber/ultisnips.git'
+Bundle 'git@github.com:Darkneon/snipmate-snippets.git'
+Bundle 'tpope/vim-surround'
+Bundle 'https://github.com/vim-scripts/tComment.git'
+Bundle 'https://github.com/vim-scripts/LustyExplorer.git'
+Bundle 'https://github.com/MarcWeber/vim-addon-mw-utils.git'
+
+"= Web front-end"
+Bundle 'vim-scripts/ZenCoding.vim'
+Bundle 'vim-scripts/molokai'
+Bundle 'Bogdanp/browser-connect.vim'
+
+"= Rails ="
+Bundle 'https://github.com/tpope/vim-rails.git'
+Bundle 'https://github.com/tpope/vim-endwise.git'
 
 filetype plugin indent on     " required!
 
@@ -28,6 +46,9 @@ endif
 "tab = u25b8, eol = u2926
 set listchars=tab:▸\ ,eol:⤦ 
 
+colorscheme molokai
+let g:user_zen_expandabbr_key = '<c-e>'
+
 "= Key Mapping =
 
 nnoremap <Up> ""
@@ -40,3 +61,5 @@ nnoremap <Right> ""
 inoremap <Right> <Esc>
 
 set backspace=indent,eol,start
+
+filetype plugin indent on
